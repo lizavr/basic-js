@@ -16,6 +16,15 @@ function getSeason(date) {
     return "Unable to determine the time of year!";
   }
   const month = date.getMonth();
+  let time;
+  try
+  {
+    time = date.getTime();
+  }
+  catch
+  {
+    throw new Error("Invalid date!");
+  }
   if (month > 11 || month < 0 || typeof month !== "number") {
     throw new Error("Invalid date!");
   }
