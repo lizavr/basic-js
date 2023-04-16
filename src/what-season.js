@@ -15,10 +15,11 @@ function getSeason(date) {
   if (!date) {
     return "Unable to determine the time of year!";
   }
-  const month = date.getMonth();
+  let month;
   let time;
   try
   {
+    month = date.getMonth();
     time = date.getTime();
   }
   catch
